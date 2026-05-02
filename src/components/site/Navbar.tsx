@@ -31,23 +31,23 @@ export function Navbar() {
       <div className="container mx-auto px-4">
         <div
           className={cn(
-            "flex items-center justify-between rounded-2xl px-4 md:px-6 py-3 transition-all",
+            "flex items-center justify-between rounded-2xl px-3 sm:px-4 md:px-6 py-2.5 sm:py-3 transition-all",
             scrolled ? "glass shadow-soft" : "bg-transparent"
           )}
         >
-          <a href="#top" className="flex items-center gap-3 md:gap-4 group">
-            <div className="relative h-14 w-14 md:h-16 md:w-16 rounded-2xl grid place-items-center shrink-0 border border-gold/30 shadow-gold overflow-hidden bg-[#2a2a2a] transition-transform group-hover:scale-105">
+          <a href="#top" className="flex items-center gap-2.5 md:gap-4 group">
+            <div className="relative h-11 w-11 sm:h-14 sm:w-14 md:h-16 md:w-16 rounded-xl sm:rounded-2xl grid place-items-center shrink-0 border border-gold/30 shadow-gold overflow-hidden bg-[#2a2a2a] transition-transform group-hover:scale-105">
               <img 
                 src="/logo.png" 
                 alt="Madarsa Logo" 
                 className="w-[120%] h-[120%] max-w-none object-cover" 
               />
             </div>
-            <div className="hidden sm:block">
-              <div className="font-display text-base md:text-lg font-bold leading-tight text-foreground">
+            <div>
+              <div className="font-display text-xs sm:text-base md:text-lg font-bold leading-tight text-foreground max-w-[160px] sm:max-w-none">
                 {t.brand}
               </div>
-              <div className="text-[10px] uppercase tracking-[0.2em] text-gold-foreground/60">
+              <div className="text-[9px] sm:text-[10px] uppercase tracking-[0.15em] sm:tracking-[0.2em] text-gold-foreground/70 mt-0.5">
                 Online Islamic Institute
               </div>
             </div>
@@ -62,8 +62,9 @@ export function Navbar() {
             <a href="#contact" className="hover:text-gold transition-colors">{t.nav.contact}</a>
           </nav>
 
-          <div className="flex items-center gap-2">
-            <div className="flex items-center gap-1 rounded-full glass px-1 py-1">
+          <div className="flex items-center gap-2 md:gap-4">
+            {/* Desktop Language Selector */}
+            <div className="hidden sm:flex items-center gap-1 rounded-full glass px-1 py-1">
               <Globe className="h-3.5 w-3.5 ml-2 text-emerald-deep" />
               {langs.map((l) => (
                 <button
@@ -88,13 +89,12 @@ export function Navbar() {
               className="hidden sm:inline-flex items-center gap-2 rounded-full bg-gradient-gold px-4 py-2 text-sm font-bold text-gold-foreground shadow-gold hover:scale-105 transition-transform"
             >
               <MessageCircle className="h-4 w-4" />
-              <span className="hidden md:inline">{t.hero.cta1}</span>
-              <span className="md:hidden">WhatsApp</span>
+              <span>{t.hero.cta1}</span>
             </a>
 
             <button
               onClick={() => setOpen(!open)}
-              className="lg:hidden p-2 rounded-lg glass"
+              className="lg:hidden p-2 rounded-xl bg-emerald-deep/5 border border-emerald-deep/10 text-emerald-deep hover:bg-emerald-deep/10 transition-colors"
               aria-label="menu"
             >
               {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -103,15 +103,48 @@ export function Navbar() {
         </div>
 
         {open && (
-          <div className="lg:hidden mt-2 glass rounded-2xl p-4 animate-fade-up">
-            <nav className="flex flex-col gap-3 text-sm font-medium">
-              <a onClick={() => setOpen(false)} href="#top">{t.nav.home}</a>
-              <a onClick={() => setOpen(false)} href="#offer">{t.nav.offer}</a>
-              <a onClick={() => setOpen(false)} href="#courses">{t.nav.courses}</a>
-              <a onClick={() => setOpen(false)} href="#posters">{t.nav.posters}</a>
-              <a onClick={() => setOpen(false)} href="#why">{t.nav.about}</a>
-              <a onClick={() => setOpen(false)} href="#contact">{t.nav.contact}</a>
+          <div className="lg:hidden mt-2 glass-dark rounded-2xl p-4 animate-fade-up border border-gold/20 shadow-xl">
+            {/* Mobile Language Selector inside menu */}
+            <div className="flex items-center justify-between mb-4 pb-4 border-b border-white/10">
+              <span className="text-xs font-bold text-gold uppercase tracking-wider flex items-center gap-2">
+                <Globe className="h-4 w-4" /> Language
+              </span>
+              <div className="flex items-center gap-1 bg-white/5 rounded-full p-1 border border-white/10">
+                {langs.map((l) => (
+                  <button
+                    key={l.code}
+                    onClick={() => setLang(l.code)}
+                    className={cn(
+                      "px-3 py-1.5 text-xs font-bold rounded-full transition-all",
+                      lang === l.code
+                        ? "bg-gradient-gold text-gold-foreground shadow-sm"
+                        : "text-white/70 hover:text-white"
+                    )}
+                  >
+                    {l.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <nav className="flex flex-col gap-3 text-base font-medium text-white/90">
+              <a onClick={() => setOpen(false)} href="#top" className="py-2 hover:text-gold transition-colors">{t.nav.home}</a>
+              <a onClick={() => setOpen(false)} href="#offer" className="py-2 hover:text-gold transition-colors">{t.nav.offer}</a>
+              <a onClick={() => setOpen(false)} href="#courses" className="py-2 hover:text-gold transition-colors">{t.nav.courses}</a>
+              <a onClick={() => setOpen(false)} href="#posters" className="py-2 hover:text-gold transition-colors">{t.nav.posters}</a>
+              <a onClick={() => setOpen(false)} href="#why" className="py-2 hover:text-gold transition-colors">{t.nav.about}</a>
+              <a onClick={() => setOpen(false)} href="#contact" className="py-2 hover:text-gold transition-colors">{t.nav.contact}</a>
             </nav>
+            
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 w-full flex items-center justify-center gap-2 rounded-xl bg-gradient-gold px-4 py-3 text-sm font-bold text-gold-foreground shadow-gold"
+            >
+              <MessageCircle className="h-5 w-5" />
+              <span>{t.hero.cta1}</span>
+            </a>
           </div>
         )}
       </div>
