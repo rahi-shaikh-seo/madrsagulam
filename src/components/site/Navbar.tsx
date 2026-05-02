@@ -28,15 +28,12 @@ export function Navbar() {
         scrolled ? "py-2" : "py-4"
       )}
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-2 sm:px-4">
         <div
-          className={cn(
-            "flex items-center justify-between rounded-2xl px-3 sm:px-4 md:px-6 py-2.5 sm:py-3 transition-all",
-            scrolled ? "glass shadow-soft" : "bg-transparent"
-          )}
+          className="flex items-center justify-between rounded-2xl px-2 sm:px-4 md:px-6 py-2 sm:py-3 transition-all glass shadow-soft"
         >
-          <a href="#top" className="flex items-center gap-2.5 md:gap-4 group">
-            <div className="relative h-11 w-11 sm:h-14 sm:w-14 md:h-16 md:w-16 rounded-xl sm:rounded-2xl grid place-items-center shrink-0 border border-gold/30 shadow-gold overflow-hidden bg-[#2a2a2a] transition-transform group-hover:scale-105">
+          <a href="#top" className="flex items-center gap-1.5 sm:gap-2.5 md:gap-4 group">
+            <div className="relative h-10 w-10 sm:h-14 sm:w-14 md:h-16 md:w-16 rounded-xl sm:rounded-2xl grid place-items-center shrink-0 border border-gold/30 shadow-gold overflow-hidden bg-[#2a2a2a] transition-transform group-hover:scale-105">
               <img 
                 src="/logo.png" 
                 alt="Madarsa Logo" 
@@ -44,10 +41,10 @@ export function Navbar() {
               />
             </div>
             <div>
-              <div className="font-display text-xs sm:text-base md:text-lg font-bold leading-tight text-foreground max-w-[160px] sm:max-w-none">
+              <div className="font-display text-[11px] xs:text-[13px] sm:text-base md:text-lg font-bold leading-[1.1] text-foreground max-w-[100px] xs:max-w-[130px] sm:max-w-none">
                 {t.brand}
               </div>
-              <div className="text-[9px] sm:text-[10px] uppercase tracking-[0.15em] sm:tracking-[0.2em] text-gold-foreground/70 mt-0.5">
+              <div className="text-[7px] xs:text-[8px] sm:text-[10px] uppercase tracking-[0.1em] sm:tracking-[0.2em] text-gold-foreground/70 mt-0.5">
                 Online Islamic Institute
               </div>
             </div>
@@ -62,16 +59,16 @@ export function Navbar() {
             <a href="#contact" className="hover:text-gold transition-colors">{t.nav.contact}</a>
           </nav>
 
-          <div className="flex items-center gap-2 md:gap-4">
-            {/* Desktop Language Selector */}
-            <div className="hidden sm:flex items-center gap-1 rounded-full glass px-1 py-1">
-              <Globe className="h-3.5 w-3.5 ml-2 text-emerald-deep" />
+          <div className="flex items-center gap-1.5 sm:gap-2 md:gap-4 shrink-0">
+            {/* Always visible Language Selector, made compact for mobile */}
+            <div className="flex items-center gap-0.5 sm:gap-1 rounded-full glass px-0.5 sm:px-1 py-0.5 sm:py-1">
+              <Globe className="hidden sm:block h-3.5 w-3.5 ml-2 text-emerald-deep" />
               {langs.map((l) => (
                 <button
                   key={l.code}
                   onClick={() => setLang(l.code)}
                   className={cn(
-                    "px-2.5 py-1 text-xs font-semibold rounded-full transition-all",
+                    "px-1.5 sm:px-2.5 py-1 text-[10px] sm:text-xs font-semibold rounded-full transition-all",
                     lang === l.code
                       ? "bg-gradient-emerald text-gold shadow-soft"
                       : "text-foreground/70 hover:text-emerald-deep"
@@ -94,7 +91,7 @@ export function Navbar() {
 
             <button
               onClick={() => setOpen(!open)}
-              className="lg:hidden p-2 rounded-xl bg-emerald-deep/5 border border-emerald-deep/10 text-emerald-deep hover:bg-emerald-deep/10 transition-colors"
+              className="lg:hidden p-1.5 sm:p-2 rounded-lg sm:rounded-xl bg-emerald-deep/5 border border-emerald-deep/10 text-emerald-deep hover:bg-emerald-deep/10 transition-colors"
               aria-label="menu"
             >
               {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -104,29 +101,6 @@ export function Navbar() {
 
         {open && (
           <div className="lg:hidden mt-2 glass-dark rounded-2xl p-4 animate-fade-up border border-gold/20 shadow-xl">
-            {/* Mobile Language Selector inside menu */}
-            <div className="flex items-center justify-between mb-4 pb-4 border-b border-white/10">
-              <span className="text-xs font-bold text-gold uppercase tracking-wider flex items-center gap-2">
-                <Globe className="h-4 w-4" /> Language
-              </span>
-              <div className="flex items-center gap-1 bg-white/5 rounded-full p-1 border border-white/10">
-                {langs.map((l) => (
-                  <button
-                    key={l.code}
-                    onClick={() => setLang(l.code)}
-                    className={cn(
-                      "px-3 py-1.5 text-xs font-bold rounded-full transition-all",
-                      lang === l.code
-                        ? "bg-gradient-gold text-gold-foreground shadow-sm"
-                        : "text-white/70 hover:text-white"
-                    )}
-                  >
-                    {l.label}
-                  </button>
-                ))}
-              </div>
-            </div>
-
             <nav className="flex flex-col gap-3 text-base font-medium text-white/90">
               <a onClick={() => setOpen(false)} href="#top" className="py-2 hover:text-gold transition-colors">{t.nav.home}</a>
               <a onClick={() => setOpen(false)} href="#offer" className="py-2 hover:text-gold transition-colors">{t.nav.offer}</a>
