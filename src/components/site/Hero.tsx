@@ -82,18 +82,7 @@ export function Hero() {
             </a>
           </div>
 
-          <div className="grid grid-cols-3 gap-4 mt-16 max-w-2xl mx-auto animate-fade-up" style={{ animationDelay: "0.5s" }}>
-            {[
-              { n: "9", l: "Courses" },
-              { n: "20+", l: "Countries" },
-              { n: "₹300", l: "Per Month" },
-            ].map((s) => (
-              <div key={s.l} className="glass-dark rounded-2xl p-4 text-center">
-                <div className="font-display text-2xl md:text-4xl font-bold text-gradient-gold">{s.n}</div>
-                <div className="text-xs text-background/70 uppercase tracking-wider mt-1">{s.l}</div>
-              </div>
-            ))}
-          </div>
+
         </div>
       </div>
     </section>
