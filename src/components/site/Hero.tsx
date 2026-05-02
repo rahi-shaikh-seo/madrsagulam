@@ -14,7 +14,13 @@ export function Hero() {
 
       <div className="container mx-auto px-4 relative">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 rounded-full glass-dark px-5 py-2 mb-8 animate-fade-up">
+          <div className="mb-6 animate-fade-up">
+            <h2 className="font-arabic text-4xl md:text-5xl lg:text-6xl text-gold drop-shadow-md tracking-wide" dir="rtl">
+              السلام عليكم ورحمة الله
+            </h2>
+          </div>
+
+          <div className="inline-flex items-center gap-2 rounded-full glass-dark px-5 py-2 mb-8 animate-fade-up" style={{ animationDelay: "0.1s" }}>
             <Sparkles className="h-4 w-4 text-gold" />
             <span className="text-xs sm:text-sm font-bold tracking-[0.2em] text-gold uppercase">
               {t.hero.badge}
@@ -23,7 +29,7 @@ export function Hero() {
 
           <h1
             className="font-display text-4xl sm:text-5xl md:text-7xl font-bold text-background leading-[1.05] mb-6 animate-fade-up"
-            style={{ animationDelay: "0.1s" }}
+            style={{ animationDelay: "0.2s" }}
           >
             {t.hero.title.split(" ").slice(0, -3).join(" ")}{" "}
             <span className="text-gradient-gold">{t.hero.title.split(" ").slice(-3).join(" ")}</span>
@@ -31,14 +37,14 @@ export function Hero() {
 
           <p
             className="text-lg md:text-xl text-background/85 max-w-2xl mx-auto mb-10 animate-fade-up"
-            style={{ animationDelay: "0.2s" }}
+            style={{ animationDelay: "0.3s" }}
           >
             {t.hero.subtitle}
           </p>
 
           <div
             className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 mb-10 animate-fade-up"
-            style={{ animationDelay: "0.3s" }}
+            style={{ animationDelay: "0.4s" }}
           >
             {t.hero.trust.map((tr) => (
               <div key={tr} className="flex items-center gap-2 text-sm text-background/90">
@@ -52,7 +58,7 @@ export function Hero() {
 
           <div
             className="flex flex-col sm:flex-row items-center justify-center gap-3 animate-fade-up"
-            style={{ animationDelay: "0.4s" }}
+            style={{ animationDelay: "0.5s" }}
           >
             <a
               href={WHATSAPP_URL}
