@@ -10,7 +10,7 @@ export function KidsCourse() {
       <div className="container mx-auto px-4 relative">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
           
-          <div className="order-2 lg:order-1">
+          <div>
             <div className="inline-flex items-center gap-2 rounded-full bg-emerald-deep/10 border border-emerald-deep/20 px-4 py-1.5 mb-5">
               <Baby className="h-4 w-4 text-emerald-deep" />
               <span className="text-xs font-bold tracking-[0.2em] uppercase text-emerald-deep">For Boys & Girls (5-13 Yrs)</span>
@@ -61,7 +61,7 @@ export function KidsCourse() {
             </div>
           </div>
 
-          <div className="order-1 lg:order-2">
+          <div>
             <div className="relative rounded-3xl overflow-hidden gold-border shadow-luxe group">
               <img 
                 src={kidsPoster} 

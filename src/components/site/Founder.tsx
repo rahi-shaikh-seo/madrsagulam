@@ -13,7 +13,6 @@ export function Founder() {
           <h2 className="font-display text-3xl md:text-5xl font-bold mb-3">{t.founder.name}</h2>
           <div className="h-1 w-20 bg-gradient-gold rounded-full mb-5 mx-auto" />
           <p className="text-lg text-muted-foreground leading-relaxed">{t.founder.desc}</p>
-          <div className="mt-6 font-arabic text-2xl text-emerald-deep">السلام علیکم و رحمۃ اللہ</div>
         </div>
       </div>
     </section>
