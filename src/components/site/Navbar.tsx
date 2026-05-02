@@ -14,7 +14,6 @@ export function Navbar() {
   const { t, lang, setLang } = useLang();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [imageError, setImageError] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -37,21 +36,13 @@ export function Navbar() {
           )}
         >
           <a href="#top" className="flex items-center gap-3 group">
-            {imageError ? (
-              <div className="relative h-10 w-10 rounded-xl bg-gradient-emerald grid place-items-center shadow-gold shrink-0">
-                <span className="text-gold font-display text-xl font-bold">م</span>
-                <div className="absolute inset-0 rounded-xl ring-1 ring-gold/40" />
-              </div>
-            ) : (
-              <div className="relative h-12 w-12 rounded-xl grid place-items-center shrink-0">
-                <img 
-                  src="/logo.png" 
-                  alt="Madarsa Logo" 
-                  className="w-full h-full object-contain" 
-                  onError={() => setImageError(true)}
-                />
-              </div>
-            )}
+            <div className="relative h-12 w-12 rounded-xl grid place-items-center shrink-0">
+              <img 
+                src="/logo.png" 
+                alt="Madarsa Logo" 
+                className="w-full h-full object-contain" 
+              />
+            </div>
             <div className="hidden sm:block">
               <div className="font-display text-base md:text-lg font-bold leading-tight text-foreground">
                 {t.brand}
