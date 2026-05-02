@@ -42,6 +42,23 @@ export function Offer() {
                   </div>
                 ))}
               </div>
+              
+              <div className="mt-8 pt-6 border-t border-border/50">
+                <p className="text-sm font-semibold text-foreground/80 mb-3 flex justify-center items-center gap-2">
+                  <Crown className="h-4 w-4 text-gold" /> {t.offer.coursesListTitle}
+                </p>
+                <div className="flex flex-wrap justify-center gap-2">
+                  {t.offer.coursesList?.map((course: string, i: number) => (
+                    <span 
+                      key={i} 
+                      className="text-xs md:text-sm font-medium bg-emerald-deep/10 text-emerald-deep px-3 py-1.5 rounded-full border border-emerald-deep/20"
+                    >
+                      {course}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
               <div className="mt-8 text-center">
                 <p className="text-sm font-semibold text-destructive mb-4 animate-pulse">
                   ⚡ {t.offer.urgency}

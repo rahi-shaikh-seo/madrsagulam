@@ -23,6 +23,12 @@ export const translations = {
         { label: "2, 3, or 4 Courses", price: "₹300/mo", desc: "Study multiple courses simultaneously." },
         { label: "All 9 Courses", price: "₹300/mo", desc: "Full access to Dars-e-Nizami and all other courses!" },
       ],
+      coursesListTitle: "The 9 Courses Included:",
+      coursesList: [
+        "Dars-e-Nizami (Aalim/Aalima)", "Tajweed", "Basic Urdu", 
+        "Deeniyat", "Qirat", "English Speaking", 
+        "Naat, Hamd & Bayan", "Khatme Nubuwwat", "Indian Constitution"
+      ],
       urgency: "Limited Seats Available — Don't Miss This Opportunity",
       cta: "Reserve My Seat",
     },
@@ -116,6 +122,12 @@ export const translations = {
         { label: "2، 3 یا 4 کورسز", price: "₹300/ماہانہ", desc: "ایک ساتھ متعدد کورسز پڑھیں۔" },
         { label: "تمام 9 کورسز", price: "₹300/ماہانہ", desc: "درس نظامی اور دیگر تمام کورسز تک مکمل رسائی!" },
       ],
+      coursesListTitle: "شامل 9 کورسز:",
+      coursesList: [
+        "درس نظامی (عالم/عالمہ)", "تجوید", "بنیادی اردو", 
+        "دینیات", "قرأت", "انگلش اسپیکنگ", 
+        "نعت، حمد اور بیان", "ختم نبوت", "آئین ہند"
+      ],
       urgency: "محدود سیٹیں دستیاب — یہ موقع نہ گنوائیں",
       cta: "میری سیٹ محفوظ کریں",
     },
@@ -201,6 +213,12 @@ export const translations = {
         { label: "1 कोर्स", price: "₹300/माह", desc: "उपलब्ध 9 कोर्सेस में से कोई भी एक चुनें।" },
         { label: "2, 3 या 4 कोर्स", price: "₹300/माह", desc: "एक साथ कई कोर्सेस पढ़ें।" },
         { label: "सभी 9 कोर्स", price: "₹300/माह", desc: "दर्स ए निज़ामी और अन्य सभी कोर्सेस तक पूर्ण पहुंच!" },
+      ],
+      coursesListTitle: "शामिल 9 कोर्सेस:",
+      coursesList: [
+        "दर्स-ए-निज़ामी (आलिम/आलिमा)", "तजवीद", "बुनियादी उर्दू", 
+        "दीनियात", "किरत", "इंग्लिश स्पीकिंग", 
+        "नाअत, हम्द और बयान", "खत्मे नबुव्वत", "भारतीय संविधान"
       ],
       urgency: "सीमित सीटें — यह अवसर न खोएं",
       cta: "मेरी सीट आरक्षित करें",
