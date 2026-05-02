@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { LangProvider } from "@/i18n/LangContext";
 import { Navbar } from "@/components/site/Navbar";
-import { UrgencyBar } from "@/components/site/UrgencyBar";
 import { Hero } from "@/components/site/Hero";
 import { Offer } from "@/components/site/Offer";
 import { Courses } from "@/components/site/Courses";
@@ -34,7 +33,6 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <LangProvider>
-      <UrgencyBar />
       <Navbar />
       <main>
         <Hero />
