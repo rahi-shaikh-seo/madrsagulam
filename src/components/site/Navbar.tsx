@@ -35,12 +35,12 @@ export function Navbar() {
             scrolled ? "glass shadow-soft" : "bg-transparent"
           )}
         >
-          <a href="#top" className="flex items-center gap-3 group">
-            <div className="relative h-12 w-12 rounded-xl grid place-items-center shrink-0">
+          <a href="#top" className="flex items-center gap-3 md:gap-4 group">
+            <div className="relative h-14 w-14 md:h-16 md:w-16 rounded-2xl grid place-items-center shrink-0 border border-gold/30 shadow-gold overflow-hidden bg-[#2a2a2a] transition-transform group-hover:scale-105">
               <img 
                 src="/logo.png" 
                 alt="Madarsa Logo" 
-                className="w-full h-full object-contain" 
+                className="w-[120%] h-[120%] max-w-none object-cover" 
               />
             </div>
             <div className="hidden sm:block">
