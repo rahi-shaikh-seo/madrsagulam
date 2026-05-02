@@ -13,31 +13,20 @@ export function KidsCourse() {
           <div>
             <div className="inline-flex items-center gap-2 rounded-full bg-emerald-deep/10 border border-emerald-deep/20 px-4 py-1.5 mb-5">
               <Baby className="h-4 w-4 text-emerald-deep" />
-              <span className="text-xs font-bold tracking-[0.2em] uppercase text-emerald-deep">For Boys & Girls (5-13 Yrs)</span>
+              <span className="text-xs font-bold tracking-[0.2em] uppercase text-emerald-deep">{t.kids.badge}</span>
             </div>
             
             <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 text-foreground">
-              Online <span className="text-gradient-gold">Kids Special</span> Course
+              {t.kids.title1} <span className="text-gradient-gold">{t.kids.title2}</span> {t.kids.title3}
             </h2>
             
             <p className="text-lg text-muted-foreground mb-8">
-              Madrasa E Gulaaman E Mustafa ﷺ brings a specially designed online course for children to learn basic Islamic education, Quran, and essential manners from the comfort of your home using just a mobile phone!
+              {t.kids.desc}
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4 mb-10">
-              {[
-                "Qur'an E Tajweed (Qaida & Nazra)",
-                "Namaz Ke Ahkam & Dua",
-                "Kalma & Chand Suraten",
-                "Namaz Ka Tarika",
-                "Sunnaten Aur Ada'ab",
-                "Islam Ki Bunyadi Batein",
-                "Arbi & Urdu Language",
-                "Wuzu Ka Tarika",
-                "Akhlaqi Tarbiyat (with Drawing)",
-                "Huzoor ﷺ Ki Seerat"
-              ].map((point) => (
-                <div key={point} className="flex items-start gap-3">
+              {t.kids.points.map((point, i) => (
+                <div key={i} className="flex items-start gap-3">
                   <div className="h-5 w-5 shrink-0 rounded-full bg-gradient-gold grid place-items-center mt-0.5 shadow-gold">
                     <Star className="h-3 w-3 text-gold-foreground" />
                   </div>
@@ -53,10 +42,10 @@ export function KidsCourse() {
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-gradient-emerald px-8 py-4 font-bold text-gold shadow-luxe hover:scale-105 transition-transform"
               >
-                Register Your Child Now
+                {t.kids.cta}
               </a>
               <div className="text-sm font-semibold text-emerald-deep px-4 py-2 bg-emerald-deep/10 rounded-full border border-emerald-deep/20">
-                Duration: 6 Months • Weekly Tests
+                {t.kids.duration}
               </div>
             </div>
           </div>

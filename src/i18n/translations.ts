@@ -65,6 +65,27 @@ export const translations = {
       ],
       cta: "Enroll Now on WhatsApp",
     },
+    kids: {
+      badge: "For Boys & Girls (5-13 Yrs)",
+      title1: "Online",
+      title2: "Kids Special",
+      title3: "Course",
+      desc: "Madrasa E Gulaaman E Mustafa ﷺ brings a specially designed online course for children to learn basic Islamic education, Quran, and essential manners from the comfort of your home using just a mobile phone!",
+      points: [
+        "Qur'an E Tajweed (Qaida & Nazra)",
+        "Namaz Ke Ahkam & Dua",
+        "Kalma & Chand Suraten",
+        "Namaz Ka Tarika",
+        "Sunnaten Aur Ada'ab",
+        "Islam Ki Bunyadi Batein",
+        "Arbi & Urdu Language",
+        "Wuzu Ka Tarika",
+        "Akhlaqi Tarbiyat (with Drawing)",
+        "Huzoor ﷺ Ki Seerat"
+      ],
+      cta: "Register Your Child Now",
+      duration: "Duration: 6 Months • Weekly Tests"
+    },
     why: {
       kicker: "Why Choose Us",
       title: "Trusted by Students Worldwide",
@@ -164,6 +185,27 @@ export const translations = {
       ],
       cta: "ابھی واٹس ایپ پر داخلہ لیں",
     },
+    kids: {
+      badge: "لڑکوں اور لڑکیوں کے لیے (5-13 سال)",
+      title1: "آن لائن",
+      title2: "کڈز اسپیشل",
+      title3: "کورس",
+      desc: "مدرسہ غلامان مصطفی ﷺ بچوں کے لیے گھر بیٹھے صرف موبائل فون کے ذریعے بنیادی اسلامی تعلیم، قرآن مجید اور آدابِ زندگی سیکھنے کا خصوصی آن لائن کورس لایا ہے!",
+      points: [
+        "قرآن و تجوید (قاعدہ و ناظرہ)",
+        "نماز کے احکام و دعا",
+        "کلمہ اور چند سورتیں",
+        "نماز کا طریقہ",
+        "سنتیں اور آداب",
+        "اسلام کی بنیادی باتیں",
+        "عربی اور اردو زبان",
+        "وضو کا طریقہ",
+        "اخلاقی تربیت (ڈرائنگ کے ساتھ)",
+        "حضور ﷺ کی سیرت"
+      ],
+      cta: "ابھی اپنے بچے کا داخلہ کرائیں",
+      duration: "دورانیہ: 6 ماہ • ہفتہ وار ٹیسٹ"
+    },
     why: {
       kicker: "ہمیں کیوں منتخب کریں",
       title: "دنیا بھر کے طلباء کا اعتماد",
@@ -255,6 +297,27 @@ export const translations = {
         "अवधि: 2 वर्ष • शुल्क: केवल ₹300/माह",
       ],
       cta: "अभी व्हाट्सएप पर एडमिशन",
+    },
+    kids: {
+      badge: "लड़कों और लड़कियों के लिए (5-13 वर्ष)",
+      title1: "ऑनलाइन",
+      title2: "किड्स स्पेशल",
+      title3: "कोर्स",
+      desc: "मदरसा ए गुलामान ए मुस्तफा ﷺ बच्चों के लिए घर बैठे सिर्फ मोबाइल फोन के माध्यम से बुनियादी इस्लामी शिक्षा, कुरान और जीवन के शिष्टाचार सीखने का एक विशेष ऑनलाइन कोर्स लाया है!",
+      points: [
+        "क़ुरआन व तजवीद (कायदा व नाज़रा)",
+        "नमाज़ के अहकाम व दुआ",
+        "कलमा और चंद सूरतें",
+        "नमाज़ का तरीका",
+        "सुन्नतें और आदाब",
+        "इस्लाम की बुनियादी बातें",
+        "अरबी और उर्दू भाषा",
+        "वज़ू का तरीका",
+        "अख़लाक़ी तरबियत (ड्रॉइंग के साथ)",
+        "हुज़ूर ﷺ की सीरत"
+      ],
+      cta: "अभी अपने बच्चे का एडमिशन कराएं",
+      duration: "अवधि: 6 माह • साप्ताहिक टेस्ट"
     },
     why: {
       kicker: "हमें क्यों चुनें",
