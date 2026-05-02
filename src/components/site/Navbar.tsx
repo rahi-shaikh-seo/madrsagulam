@@ -63,7 +63,7 @@ export function Navbar() {
           </nav>
 
           <div className="flex items-center gap-2">
-            <div className="hidden md:flex items-center gap-1 rounded-full glass px-1 py-1">
+            <div className="flex items-center gap-1 rounded-full glass px-1 py-1">
               <Globe className="h-3.5 w-3.5 ml-2 text-emerald-deep" />
               {langs.map((l) => (
                 <button
@@ -112,20 +112,6 @@ export function Navbar() {
               <a onClick={() => setOpen(false)} href="#why">{t.nav.about}</a>
               <a onClick={() => setOpen(false)} href="#contact">{t.nav.contact}</a>
             </nav>
-            <div className="flex items-center gap-2 mt-4 pt-4 border-t border-border">
-              {langs.map((l) => (
-                <button
-                  key={l.code}
-                  onClick={() => setLang(l.code)}
-                  className={cn(
-                    "px-3 py-1.5 text-xs font-semibold rounded-full",
-                    lang === l.code ? "bg-gradient-emerald text-gold" : "bg-muted"
-                  )}
-                >
-                  {l.label}
-                </button>
-              ))}
-            </div>
           </div>
         )}
       </div>
