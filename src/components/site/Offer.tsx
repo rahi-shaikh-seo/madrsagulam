@@ -27,12 +27,15 @@ export function Offer() {
             </div>
             <div className="rounded-3xl bg-card p-8 md:p-12">
               <div className="space-y-3">
-                {t.offer.rows.map((r, i) => (
+                {t.offer.rows.map((r: any, i) => (
                   <div
                     key={i}
                     className="flex items-center justify-between p-5 rounded-2xl bg-gradient-beige gold-border hover:shadow-soft transition"
                   >
-                    <span className="font-display text-xl md:text-2xl font-semibold">{r.label}</span>
+                    <div>
+                      <span className="font-display text-xl md:text-2xl font-semibold block">{r.label}</span>
+                      {r.desc && <span className="text-sm text-muted-foreground block mt-1">{r.desc}</span>}
+                    </div>
                     <span className="font-display text-3xl md:text-4xl font-bold text-gradient-gold">
                       {r.price}
                     </span>

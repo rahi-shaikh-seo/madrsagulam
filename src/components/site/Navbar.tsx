@@ -36,9 +36,8 @@ export function Navbar() {
           )}
         >
           <a href="#top" className="flex items-center gap-3 group">
-            <div className="relative h-10 w-10 rounded-xl bg-gradient-emerald grid place-items-center shadow-gold">
-              <span className="text-gold font-display text-xl font-bold">م</span>
-              <div className="absolute inset-0 rounded-xl ring-1 ring-gold/40" />
+            <div className="relative h-12 w-12 rounded-xl grid place-items-center">
+              <img src="/logo.png" alt="Madarsa Logo" className="w-full h-full object-contain" />
             </div>
             <div className="hidden sm:block">
               <div className="font-display text-base md:text-lg font-bold leading-tight text-foreground">
