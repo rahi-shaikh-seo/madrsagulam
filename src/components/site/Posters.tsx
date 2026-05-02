@@ -8,13 +8,22 @@ import dars from "@/assets/poster-darsenizami.png";
 import muftiya from "@/assets/poster-muftiya.png";
 import urdu from "@/assets/poster-urdu.png";
 
+import darsEnglish from "@/assets/poster-dars-english.jpg";
+import allCourses from "@/assets/poster-all-courses.jpg";
+import dars300 from "@/assets/poster-dars-300.jpg";
+import nazra from "@/assets/poster-nazra.jpg";
+
 const posters = [
   { src: offer, label: "₹300 Big Offer — All 9 Courses" },
+  { src: kids, label: "Online Kids Special Course" },
+  { src: dars300, label: "Dars-e-Nizami (₹300/mo)" },
+  { src: darsEnglish, label: "Aalima Course (English)" },
+  { src: allCourses, label: "All 22 Courses List" },
+  { src: nazra, label: "Nazra Qur'an & Hifz" },
   { src: dars, label: "Dars-e-Nizami • Full Aalimiyat" },
   { src: muftiya, label: "Muftiya & Mufti Course" },
   { src: muballiga, label: "Muballiga Course (Females)" },
   { src: hajj, label: "Safar-e-Hajj & Umrah" },
-  { src: kids, label: "Online Kids Special Course" },
   { src: urdu, label: "Urdu Reading & Writing" },
 ];
 

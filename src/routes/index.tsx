@@ -15,6 +15,7 @@ import { Founder } from "@/components/site/Founder";
 import { Footer } from "@/components/site/Footer";
 import { StickyCTA } from "@/components/site/StickyCTA";
 import { AutoPopup } from "@/components/site/AutoPopup";
+import { KidsCourse } from "@/components/site/KidsCourse";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -40,6 +41,7 @@ function Index() {
         <Offer />
         <Courses />
         <Muballiga />
+        <KidsCourse />
         <Why />
         <Certification />
         <Proof />
